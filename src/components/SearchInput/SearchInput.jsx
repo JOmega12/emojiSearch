@@ -1,14 +1,6 @@
 import React from 'react';
 
 class SearchInput extends React.Component {
-   constructor(props) {
-      super(props)
-      this.state = {
-         emptyString: '',
-      }
-   }
-
-   
 
    render() {
 
@@ -19,13 +11,18 @@ class SearchInput extends React.Component {
          padding: '10px',
          borderRadius: '10px',
       }
-      return(
-         <input 
-         type="text"
-         placeholder='Search for an emoji'
-         style = {stylez}
-         />
-      )
+      return (
+        <div>
+          <input
+            type="text"
+            placeholder="Search for an emoji"
+            style={stylez}
+            value={this.props.searchTextProps}
+            name="emptyString"
+            onChange={this.props.handleOnChangeProps}
+          />
+        </div>
+      );
    }
 }
 
